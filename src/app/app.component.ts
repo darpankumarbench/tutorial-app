@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tutorial-app';
+  show = true;
+
+  onSubmit(value:any){
+    console.log(value);
+  }
 }
