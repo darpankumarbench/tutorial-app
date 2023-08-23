@@ -1,9 +1,14 @@
-<h1>Hello</h1>
-{{title}}
 <div class="container">
-  <form #simpleFrom="ngForm" (ngSubmit)="onSubmit(simpleFrom.value)">
+  <h1>Hello</h1>
+  <!-- <form #simpleFrom="ngForm" (ngSubmit)="onSubmit(simpleFrom.value)">
+    <p *ngFor="let alert of alerts">
+      <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+    </p>
+    <p>
+      <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+    </p>
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <p>
           <ngb-alert [dismissible]="false">
             <strong>Warning!</strong> Better check yourself, you're not looking too good.
@@ -25,7 +30,11 @@
     </div>
   
     <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <mat-slider min="10" max="10000"  step="10" value="95" [displayWith]="formatLabel">
+      <input matSliderThumb>
+    </mat-slider>
+  </form> -->
+  <app-user-list [hero]="title"></app-user-list>
 </div>
 
 
