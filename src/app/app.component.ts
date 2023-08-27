@@ -41,17 +41,17 @@ const ALERTS: Alert[] = [
 ];
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = {
-    name:"Darpan",
-    age:14
-  };
-  show = true;
-  alerts: Alert[] = [];
+	title = {
+		name: "Darpan",
+		age: 14
+	};
+	show = true;
+	alerts: Alert[] = [];
 
 	constructor() {
 		this.reset();
@@ -65,14 +65,16 @@ export class AppComponent {
 		this.alerts = Array.from(ALERTS);
 	}
 
-  onSubmit(value:any){
-    console.log(value);
-  }
-  formatLabel(value: number): string {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'k';
-    }
-
-    return `${value}`;
-  }
+	onSubmit(value: any) {
+		console.log(value);
+	}
+	formatLabel(value: number): string {
+		if (value >= 1000) {
+			return Math.round(value / 1000) + 'k';
+		}
+		return `${value}`;
+	}
+	parentComponent(data: any){
+		console.log(data);
+	}
 }

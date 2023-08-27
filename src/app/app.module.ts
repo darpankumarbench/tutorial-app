@@ -10,12 +10,21 @@ import { from } from 'rxjs';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatButtonModule } from '@angular/material/button'
-import { MatSliderModule } from '@angular/material/slider'
+import { MatSliderModule } from '@angular/material/slider';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomStyleDirective } from './custom-style.directive'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    AboutComponent,
+    ContactComponent,
+    PageNotFoundComponent,
+    CustomStyleDirective
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,8 @@ import { MatSliderModule } from '@angular/material/slider'
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -6,11 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  @Input () hero: any;
+  @Output () parentComponent:EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+    this.parentComponent.emit("hello");
   }
 
 }

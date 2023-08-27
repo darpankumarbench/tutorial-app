@@ -1,0 +1,19 @@
+<h1>about works!</h1>
+<div class="container">
+    <table border="1">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of data">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
